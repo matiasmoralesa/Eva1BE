@@ -58,6 +58,26 @@ def registrar_bicicleta():
     listaBicicletas.append(bicicleta)
     print("Bicicleta registrada exitosamente.")
 
+def registrar_scooter():
+    print("Registrando un nuevo Scooter:")
+    marca = input("Ingrese la marca: ")
+    voltaje = int(input("Ingrese el voltaje (en voltios): "))
+    precio = float(input("Ingrese el precio: "))
+    eficiencia = input("Ingrese la eficiencia (A, B, C, D, E o F): ")
+    aro = float(input("Ingrese el aro: "))
+    velocidad = int(input("Ingrese la velocidad (en km/h): "))
+    peso = float(input("Ingrese el peso en kg: "))
+
+    # Validaciones simples
+    if voltaje <= 0 or precio <= 0 or aro <= 0 or velocidad <= 0 or peso <= 0 or eficiencia not in ['A', 'B', 'C', 'D', 'E', 'F']:
+        print("Error: Datos ingresados no válidos para registrar un Scooter.")
+        return
+
+    # Crear el objeto Scooter y agregarlo a la lista
+    scooter = Scoter(marca, voltaje, precio, eficiencia, aro, velocidad, peso)
+    listaScoters.append(scooter)
+    print("Scooter registrado exitosamente.")    
+
 # Función para cotizar los TVs y mostrar la información
 def cotizar_tvs():
     print("Cotizando TVs:")
@@ -72,7 +92,7 @@ def cotizar_consolas():
 
 # Función para cotizar los scooters y mostrar la información
 def cotizar_scooters():
-    for scooter in listaScooter:
+    for scooter in listaScoters:
         print(scooter.cotizar())
 
 # Función para cotizar las bicicletas y mostrar la información
@@ -96,7 +116,7 @@ def menu():
 # Lista para almacenar los productos
 listaTvs = []
 listaConsolas = []
-listaScooter = []
+listaScoters = []
 listaBicicletas = []
 
 # Implementa el código para el manejo del menú y llamadas a las funciones según la opción elegida

@@ -1,7 +1,7 @@
 from Tecnologia import Tecnologia
 from Transporte import Transporte
 
-class Scooter(Transporte, Tecnologia):
+class Scoter(Transporte, Tecnologia):
     def __init__(self, marca: str, voltaje: int, precio: float, eficiencia: str, aro: float, velocidad: int, peso: float):
         Transporte.__init__(self, marca, voltaje, precio, eficiencia, peso)  # Llama al constructor de Transporte
         Tecnologia.__init__(self, marca, voltaje, precio, eficiencia)  # Llama al constructor de ProductoTecnologico
