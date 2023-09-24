@@ -13,7 +13,7 @@ def registrar_tv():
     tamanio = float(input("Ingrese el tamaño en pulgadas: "))
 
     # Validaciones simples
-    if voltaje <= 0 or precio <= 0 or tamanio <= 0 or eficiencia not in ['A', 'B', 'C', 'D', 'E', 'F']:
+    if voltaje < 0 or precio < 0 or tamanio < 0 or eficiencia not in ['A', 'B', 'C', 'D', 'E', 'F']:
         print("Error: Datos ingresados no válidos para registrar un TV.")
         return
     
@@ -24,6 +24,7 @@ def registrar_tv():
 # Función para registrar una consola y agregarla a la lista de consolas
 def registrar_consola():
     print("Registrando una nueva Consola:")
+    marca = input("Ingrese la marca: ")
     nombre_consola = input("Ingrese el nombre de la consola: ")
     version = input("Ingrese la versión (Lite u otra): ")
     voltaje = int(input("Ingrese el voltaje (en voltios): "))
@@ -36,7 +37,7 @@ def registrar_consola():
         return
 
     # Crear el objeto Consola y agregarlo a la lista
-    consola = Consola(nombre_consola, version, voltaje, precio, eficiencia)
+    consola = Consola(marca, nombre_consola, version, voltaje, precio, eficiencia)
     listaConsolas.append(consola)
     print("Consola registrada exitosamente.")
 
@@ -44,17 +45,17 @@ def registrar_consola():
 def registrar_bicicleta():
     print("Registrando una nueva Bicicleta:")
     marca = input("Ingrese la marca: ")
-    voltaje = int(input("Ingrese el voltaje (en voltios): "))
-    precio = float(input("Ingrese el precio: "))
-    eficiencia = input("Ingrese la eficiencia (A, B, C, D, E o F): ")
+    aro = float(input("Ingrese el aro: "))
     peso = float(input("Ingrese el peso en kg: "))
+    precio = float(input("Ingrese el precio: "))
 
     # Validaciones simples
-    if voltaje <= 0 or precio <= 0 or peso <= 0 or eficiencia not in ['A', 'B', 'C', 'D', 'E', 'F']:
+    if aro < 0 or peso < 0 or precio < 0:
         print("Error: Datos ingresados no válidos para registrar una Bicicleta.")
         return
 
-    bicicleta = Bicicleta(marca, voltaje, eficiencia, precio, peso, "Montaña")  # Asignamos tipo "Montaña" por defecto
+    # Crear el objeto Bicicleta y agregarlo a la lista
+    bicicleta = Bicicleta(aro, peso, precio, marca)
     listaBicicletas.append(bicicleta)
     print("Bicicleta registrada exitosamente.")
 
