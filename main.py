@@ -107,11 +107,12 @@ def menu():
     print("1. Registrar TV")
     print("2. Registrar Consola")
     print("3. Registrar Bicicleta")
-    print("4. Cotizar TVs")
-    print("5. Cotizar Consolas")
-    print("6. Cotizar Scooters")
-    print("7. Cotizar Bicicletas")
-    print("8. Salir")
+    print("4. Registrar Scoter")
+    print("5. Cotizar TVs")
+    print("6. Cotizar Consolas")
+    print("7. Cotizar Scooters")
+    print("8. Cotizar Bicicletas")
+    print("9. Salir")
 
 # Lista para almacenar los productos
 listaTvs = []
@@ -131,14 +132,16 @@ while True:
     elif opcion == 3:
         registrar_bicicleta()
     elif opcion == 4:
-        cotizar_tvs()
+        registrar_scooter()    
     elif opcion == 5:
-        cotizar_consolas()
+        cotizar_tvs()
     elif opcion == 6:
-        cotizar_scooters()
+        cotizar_consolas()
     elif opcion == 7:
-        cotizar_bicicletas()
+        cotizar_scooters()
     elif opcion == 8:
+        cotizar_bicicletas()
+    elif opcion == 9:
         break
     else:
         print("Opción no válida. Por favor, seleccione una opción válida.")
