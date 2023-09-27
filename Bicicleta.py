@@ -9,5 +9,5 @@ class Bicicleta(Transporte):
         self.__marca = marca  
 
     def calcular_despacho(self) -> float:
-        costo_despacho_total = Transporte.COSTO_DESPACHO_BASE + self.__peso * 400  # Valor por kilogramo para bicicletas
+        costo_despacho_total = Transporte.COSTO_DESPACHO_BASE + self.__peso * 400  
         return costo_despacho_total

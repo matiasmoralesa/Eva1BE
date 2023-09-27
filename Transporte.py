@@ -1,5 +1,5 @@
 class Transporte:
-    COSTO_DESPACHO_BASE = 4000  # Nuevo atributo
+    COSTO_DESPACHO_BASE = 4000  
 
     def __init__(self, marca: str, voltaje: int, precio: float, eficiencia: str, peso: float):
         self.__marca = marca

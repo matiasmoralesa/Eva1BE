@@ -13,7 +13,7 @@ def registrar_tv():
     tamanio = float(input("Ingrese el tamaño en pulgadas: "))
 
     # Validaciones simples
-    if voltaje < 0 or precio < 0 or tamanio < 0 or eficiencia not in ['A', 'B', 'C', 'D', 'E', 'F']:
+    if voltaje < 0 or precio < 0 or tamanio < 0 or eficiencia.upper() not in ['A', 'B', 'C', 'D', 'E', 'F']:
         print("Error: Datos ingresados no válidos para registrar un TV.")
         return
     
@@ -31,8 +31,8 @@ def registrar_consola():
     precio = float(input("Ingrese el precio: "))
     eficiencia = input("Ingrese la eficiencia (A, B, C, D, E o F): ")
 
-    # Validaciones simples
-    if voltaje <= 0 or precio <= 0 or eficiencia not in ['A', 'B', 'C', 'D', 'E', 'F']:
+    # Validaciones 
+    if voltaje <= 0 or precio <= 0 or eficiencia.upper() not in ['A', 'B', 'C', 'D', 'E', 'F']:
         print("Error: Datos ingresados no válidos para registrar una Consola.")
         return
 
@@ -49,7 +49,7 @@ def registrar_bicicleta():
     peso = float(input("Ingrese el peso en kg: "))
     precio = float(input("Ingrese el precio: "))
 
-    # Validaciones simples
+    # Validaciones 
     if aro < 0 or peso < 0 or precio < 0:
         print("Error: Datos ingresados no válidos para registrar una Bicicleta.")
         return
@@ -69,8 +69,8 @@ def registrar_scooter():
     velocidad = int(input("Ingrese la velocidad (en km/h): "))
     peso = float(input("Ingrese el peso en kg: "))
 
-    # Validaciones simples
-    if voltaje <= 0 or precio <= 0 or aro <= 0 or velocidad <= 0 or peso <= 0 or eficiencia not in ['A', 'B', 'C', 'D', 'E', 'F']:
+    # Validaciones
+    if voltaje <= 0 or precio <= 0 or aro <= 0 or velocidad <= 0 or peso <= 0 or eficiencia.upper() not in ['A', 'B', 'C', 'D', 'E', 'F']:
         print("Error: Datos ingresados no válidos para registrar un Scooter.")
         return
 
@@ -121,7 +121,6 @@ listaConsolas = []
 listaScoters = []
 listaBicicletas = []
 
-# Implementa el código para el manejo del menú y llamadas a las funciones según la opción elegida
 while True:
     menu()
     opcion = int(input("Seleccione una opción: "))

@@ -3,14 +3,14 @@ from Transporte import Transporte
 
 class Scoter(Transporte, Tecnologia):
     def __init__(self, marca: str, voltaje: int, precio: float, eficiencia: str, aro: float, velocidad: int, peso: float):
-        Transporte.__init__(self, marca, voltaje, precio, eficiencia, peso)  # Llama al constructor de Transporte
-        Tecnologia.__init__(self, marca, voltaje, precio, eficiencia)  # Llama al constructor de ProductoTecnologico
+        Transporte.__init__(self, marca, voltaje, precio, eficiencia, peso)  
+        Tecnologia.__init__(self, marca, voltaje, precio, eficiencia) 
         self.aro = aro
         self.velocidad = velocidad
         self.peso = peso
 
     def calcular_despacho(self) -> float:
-        valor_por_kg = 300  # Valor por kilogramo para scooters
+        valor_por_kg = 300  
         costo_despacho_total = Transporte.COSTO_DESPACHO_BASE + self.peso * valor_por_kg
         return costo_despacho_total
 
