@@ -39,22 +39,12 @@ class Transporte:
         self.__peso = value
 
 
-    def calcular_descuento(self) -> float:
-        if self.eficiencia in ['A', 'B']:
-            return 0.5
-        elif self.eficiencia in ['C', 'D']:
-            return 0.3
-        elif self.eficiencia in ['E', 'F']:
-            return 0.1
-        else:
-            return 0
-
     def calcular_despacho(self) -> float:
-        costo_despacho_total = Transporte.COSTO_DESPACHO_BASE + self.peso * self.valor_por_kg
+        costo_despacho_total = Transporte.COSTO_DESPACHO_BASE + self.__peso * self.__valor_por_kg
         return costo_despacho_total
 
     def cotizar(self, valor_por_kg: float):
-        self.valor_por_kg = valor_por_kg
+        self.__valor_por_kg = valor_por_kg
         descuento_eficiencia = self.calcular_descuento()
         costo_despacho = self.calcular_despacho()
         precio_con_descuento = self.precio * (1 - descuento_eficiencia)

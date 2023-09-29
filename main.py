@@ -3,6 +3,9 @@ from Bicicleta import Bicicleta
 from Tv import Tv
 from Scoter import Scoter
 
+#lista de Eficiencia
+listaEficiencia = ["A", "B", "C", "D", "E", "F"]
+
 # Función para registrar un TV y agregarlo a la lista de TVs
 def registrar_tv():
     print("Registrando un nuevo TV:")
@@ -13,7 +16,7 @@ def registrar_tv():
     tamanio = float(input("Ingrese el tamaño en pulgadas: "))
 
     # Validaciones simples
-    if voltaje < 0 or precio < 0 or tamanio < 0 or eficiencia.upper() not in ['A', 'B', 'C', 'D', 'E', 'F']:
+    if voltaje < 0 or precio < 0 or tamanio < 0 or eficiencia.upper() not in listaEficiencia:
         print("Error: Datos ingresados no válidos para registrar un TV.")
         return
     
@@ -32,7 +35,7 @@ def registrar_consola():
     eficiencia = input("Ingrese la eficiencia (A, B, C, D, E o F): ")
 
     # Validaciones 
-    if voltaje <= 0 or precio <= 0 or eficiencia.upper() not in ['A', 'B', 'C', 'D', 'E', 'F']:
+    if voltaje <= 0 or precio <= 0 or eficiencia.upper() not in listaEficiencia:
         print("Error: Datos ingresados no válidos para registrar una Consola.")
         return
 
@@ -70,7 +73,7 @@ def registrar_scooter():
     peso = float(input("Ingrese el peso en kg: "))
 
     # Validaciones
-    if voltaje <= 0 or precio <= 0 or aro <= 0 or velocidad <= 0 or peso <= 0 or eficiencia.upper() not in ['A', 'B', 'C', 'D', 'E', 'F']:
+    if voltaje <= 0 or precio <= 0 or aro <= 0 or velocidad <= 0 or peso <= 0 or eficiencia.upper() not in listaEficiencia:
         print("Error: Datos ingresados no válidos para registrar un Scooter.")
         return
 
