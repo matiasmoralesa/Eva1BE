@@ -61,7 +61,7 @@ class Consola(Tecnologia):
     def cotizar(self):
         descuento_eficiencia = self.calcular_descuento_version()
         precio_con_descuento = self.__precio * (1 - descuento_eficiencia)
-        return f"Características: Marca: {self.__marca}, Nombre de la consola: {self.__nombre_consola}, Versión: {self.__version}, Voltaje: {self.__voltaje}, Eficiencia: {self.__eficiencia}, Precio: ${self.__precio}, Descuento aplicado: {descuento_eficiencia * 100}%, Precio con descuento: ${precio_con_descuento}, Valor total después del descuento: ${precio_con_descuento}"
+        return f"Características: Marca: {self.__marca}, Nombre de la consola: {self.__nombre_consola}, Versión: {self.__version}, Voltaje: {self.__voltaje}, Eficiencia: {self.__eficiencia}, Precio: ${self.__precio}, Descuento aplicado: {descuento_eficiencia * 100}%, Precio con descuento Eficiencia: ${precio_con_descuento}, Valor total después del descuento: ${precio_con_descuento}"
 
     def calcular_descuento_version(self):
         descuento_eficiencia = self.calcular_descuento()
