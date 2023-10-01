@@ -114,8 +114,8 @@ def menu():
     print("4. Registrar Scoter")
     print("5. Cotizar TVs")
     print("6. Cotizar Consolas")
-    print("7. Cotizar Scooters")
-    print("8. Cotizar Bicicletas")
+    print("7. Cotizar Bicicletas")
+    print("8. Cotizar Scooters")
     print("9. Salir")
 
 # Lista para almacenar los productos
@@ -141,9 +141,9 @@ while True:
     elif opcion == 6:
         cotizar_consolas()
     elif opcion == 7:
-        cotizar_scooters()
-    elif opcion == 8:
         cotizar_bicicletas()
+    elif opcion == 8:
+        cotizar_scooters()
     elif opcion == 9:
         break
     else:
