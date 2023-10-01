@@ -3,7 +3,7 @@ from Transporte import Transporte
 
 class Scoter(Transporte, Tecnologia):
     def __init__(self, marca: str, voltaje: int, precio: float, eficiencia: str, aro: float, velocidad: int, peso: float):
-        Transporte.__init__(self, marca, voltaje, precio, eficiencia, peso)  
+        Transporte.__init__(self, peso)  
         Tecnologia.__init__(self, marca, voltaje, precio, eficiencia) 
         self.__aro = aro
         self.__velocidad = velocidad
@@ -77,7 +77,7 @@ class Scoter(Transporte, Tecnologia):
     def cotizar(self):
         descuento_eficiencia = self.calcular_descuento()
         costo_despacho = self.calcular_despacho()
-        precio_con_descuento = self.precio * (1 - descuento_eficiencia)
+        precio_con_descuento = self.__precio * (1 - descuento_eficiencia)
         precio_final = precio_con_descuento + costo_despacho
         return f"Características: Marca: {self.__marca}, Voltaje: {self.__voltaje}, Eficiencia: {self.__eficiencia}, Precio: ${self.__precio}, Aro: {self.__aro}, Velocidad: {self.__velocidad} km/h, Peso: {self.__peso} kg, Descuento aplicado: {descuento_eficiencia * 100}%, Costo de despacho: ${costo_despacho}, Precio total: ${precio_final}"
     
